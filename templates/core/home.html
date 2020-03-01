@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+<div>
+    <div>
+        <p>
+        <form method="post">
+            {% csrf_token %}
+            {{ transferform.as_p }}
+
+            <button type="submit">submit</button>
+        </form>
+        </p>
+        <p>
+            {{ response }}
+        </p>
+    </div>
+</div>
+</body>
+</html>
