@@ -17,5 +17,5 @@ def home(request):
             data = transfer_form.cleaned_data
             response = transfer_to_inn(data)
             context['response'] = response
-        context['transfer_form'] = TransferForm()
+        context['transfer_form'] = transfer_form
         return render(request, 'core/home.html', context)
